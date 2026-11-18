@@ -1,0 +1,1 @@
+The lab period is almost over: you have {left} turns left. Finish your curve fit, record your constant in your notebook, and call finish.
