@@ -213,6 +213,10 @@ class SessionTests(unittest.TestCase):
                 shown = [m["content"] for m in server.requests[-1]["messages"]
                          if m["role"] == "tool"]
                 self.assertEqual(shown[0], "Ok. The knob has been set.")
+                knob = next(t for t in server.requests[0]["tools"]
+                            if t["function"]["name"] == "set_knob")["function"]
+                self.assertEqual(knob["description"],
+                                 "Turn the knob to a new setting, from 0.1 to 2.")
                 self.assertRegex(shown[1], r"^0\.3\d{3} s$")      # just the time
                 self.assertEqual(shown[4], "The knob cannot go above 2.")
                 self.assertEqual(shown[7], "Plot 1 saved.")

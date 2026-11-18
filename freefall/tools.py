@@ -81,12 +81,7 @@ class SetKnob(Tool):
 
     def __init__(self, apparatus: Apparatus):
         lo, hi = apparatus.min_height, apparatus.max_height
-        self.description = (
-            f"Turn the knob to a new setting, from {lo:g} to {hi:g}. "
-            "Sometimes we misunderstand your directions about setting the knob. If your "
-            "knob setting goes through, we'll confirm it with a phrase like 'Ok. The knob "
-            "has been set.' If you don't see this response, request the knob setting again."
-        )
+        self.description = f"Turn the knob to a new setting, from {lo:g} to {hi:g}."
         self.parameters = {
             "type": "object",
             "properties": {"h": {"type": "number",

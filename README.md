@@ -45,7 +45,7 @@ set the defaults. A host error is retried up to 8 times (2, 4, 8, 16, then
 
 | Tool | What the model reads, and what it gets back |
 | --- | --- |
-| `set_knob(h)` | Turn the knob to a setting from 0.1 to 2. Replies only "Ok. The knob has been set." (or why not, e.g. "The knob cannot go above 2."). Its description says a request is sometimes misunderstood, and to ask again if no confirmation comes. |
+| `set_knob(h)` | Turn the knob to a setting from 0.1 to 2. Replies only "Ok. The knob has been set." (or why not, e.g. "The knob cannot go above 2."). |
 | `push_the_button()` | Drops the ball. Replies only the time, e.g. `0.4518 s`; keeping track of the setting is the model's job. |
 | `write_down(text)` | Adds a notebook entry; the text is kept verbatim and no action is taken on it. |
 | `read_notebook()` | Every notebook entry. |
